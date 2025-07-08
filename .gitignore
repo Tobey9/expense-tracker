@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# Optional: database or temporary data
+*.sqlite
+*.sqlite3
+*.db
+dump.sql
+
+# Coverage reports
+coverage/
+
+# Build artifacts (optional)
+dist/
+build/
