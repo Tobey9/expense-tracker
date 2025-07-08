@@ -61,9 +61,15 @@ DELETE /expenses/:expenseId → Delete an expense
 GET /expenses/filter?filter=week|month|3months|custom&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd → Get filtered expenses
 
 To run this Expense Tracker backend locally, follow these steps.
+
 Step 1: Clone the repository to your local machine using Git.
+
 Step 2: Navigate into the project directory and run npm install to install all required dependencies.
+
 Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings.
+
 Step 4: Start the development server by running npm start.
+
 Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses.
+
 Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated.
