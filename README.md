@@ -57,60 +57,10 @@ DELETE /expenses/:expenseId → Delete an expense
 
 GET /expenses/filter?filter=week|month|3months|custom&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd → Get filtered expenses
 
-⚙️ Setup Instructions
-To run this project locally:
-
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/expense-tracker-api.git
-cd expense-tracker-api
-Install dependencies:
-
-bash
-Copy
-Edit
-npm install
-Create a .env file and add your environment variables:
-
-ini
-Copy
-Edit
-JWT_SECRET=your_jwt_secret_key
-DB_NAME=your_database_name
-DB_USER=your_database_user
-DB_PASSWORD=your_database_password
-DB_HOST=localhost
-NODE_ENV=development
-Create your database using a SQL client:
-
-sql
-Copy
-Edit
-CREATE DATABASE your_database_name;
-Run the development server:
-
-bash
-Copy
-Edit
-npm run dev
-The API will be live at http://localhost:3000.
-
-📬 Testing in Postman
-Register or login via /users/register or /users/login.
-
-The JWT token will be set in an HttpOnly cookie.
-
-Use protected routes like POST /expenses/add after login.
-
-For filtering, use query params like:
-
-sql
-Copy
-Edit
-/expenses/filter?filter=week
-/expenses/filter?filter=custom&startDate=2024-01-01&endDate=2024-03-31
-📝 License
-This project is open-source and free to use.
+To run this Expense Tracker backend locally, follow these steps.
+Step 1: Clone the repository to your local machine using Git.
+Step 2: Navigate into the project directory and run npm install to install all required dependencies.
+Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings.
+Step 4: Start the development server by running npm start.
+Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses.
+Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated.
