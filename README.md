@@ -22,7 +22,7 @@ https://roadmap.sh/projects/expense-tracker-api
   - Last 3 months
   - Custom date range
 
-##🧠 Technologies Used
+## 🧠 Technologies Used
 
 1. Node.js
 2. Express.js
@@ -56,14 +56,14 @@ GET /expenses/filter?filter=week|month|3months|custom&startDate=yyyy-mm-dd&endDa
 
 ### To run this Expense Tracker backend locally, follow these steps.
 
-**_Step 1: Clone the repository to your local machine using Git._**
+Step 1: Clone the repository to your local machine using Git.
 
-**_Step 2: Navigate into the project directory and run npm install to install all required dependencies._**
+Step 2: Navigate into the project directory and run npm install to install all required dependencies.
 
-**_Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings._**
+Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings.
 
-**_Step 4: Start the development server by running npm start._**
+Step 4: Start the development server by running npm start.
 
-**_Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses._**
+Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses.
 
-**_Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated._**
+Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated.
