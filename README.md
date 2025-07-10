@@ -1,75 +1,69 @@
 https://roadmap.sh/projects/expense-tracker-api
 
+# 💸 Expense Tracker API
 
-💸 Expense Tracker API
-This is a secure backend API for an Expense Tracker application, built using Node.js and Express.js. It allows users to register and log in, and then add, edit, delete, or view their expenses — all protected by JWT authentication.
+**This is a secure backend API for an Expense Tracker application, built using Node.js and Express.js. It allows users to register and log in, and then add, edit, delete, or view their expenses — all protected by JWT authentication.**
 
-🚀 Features
-✅ User Registration and Login (/users/register, /users/login)
+## 🚀 Features
 
-🔐 JWT-based Authentication with HttpOnly Cookies
+- ✅ User Registration and Login (/users/register, /users/login)
 
-➕ Add a new expense
+- 🔐 JWT-based Authentication with HttpOnly Cookies
 
-📝 Edit existing expenses
+- ➕ Add a new expense
 
-❌ Delete an expense
+- 📝 Edit existing expenses
 
-📅 Filter expenses by:
+- ❌ Delete an expense
 
-Past week
+- 📅 Filter expenses by:
+  - Past week
+  - Past month
+  - Last 3 months
+  - Custom date range
 
-Past month
+##🧠 Technologies Used
 
-Last 3 months
+1. Node.js
+2. Express.js
+3. Sequelize ORM
+4. MySQL (or PostgreSQL)
+5. JWT (JSON Web Tokens)
+6. bcrypt (for password hashing)
+7. dotenv
 
-Custom date range
+## 🔐 Authentication
 
-🧠 Technologies Used
-Node.js
+_All routes under /expenses are protected and require the user to be logged in. Authentication is done via JWT tokens stored in HttpOnly cookies._
 
-Express.js
+## 📂 API Endpoints
 
-Sequelize ORM
+_👤 Users (/users)_
+POST /users/register → _Register a new user_
 
-MySQL (or PostgreSQL)
+POST /users/login → _Log in and receive JWT token_
 
-JWT (JSON Web Tokens)
+GET /users/logout → _Log out the user_
 
-bcrypt (for password hashing)
+_💵 Expenses (/expenses)_
+POST /expenses/add → _Add new expense (requires login)_
 
-dotenv
+PUT /expenses/edit/:expenseId → _Edit an expense_
 
-🔐 Authentication
-All routes under /expenses are protected and require the user to be logged in. Authentication is done via JWT tokens stored in HttpOnly cookies.
+DELETE /expenses/:expenseId → _Delete an expense_
 
-📂 API Endpoints
-👤 Users (/users)
-POST /users/register → Register a new user
+GET /expenses/filter?filter=week|month|3months|custom&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd → _Get filtered expenses_
 
-POST /users/login → Log in and receive JWT token
+### To run this Expense Tracker backend locally, follow these steps.
 
-GET /users/logout → Log out the user
+**_Step 1: Clone the repository to your local machine using Git._**
 
-💵 Expenses (/expenses)
-POST /expenses/add → Add new expense (requires login)
+**_Step 2: Navigate into the project directory and run npm install to install all required dependencies._**
 
-PUT /expenses/edit/:expenseId → Edit an expense
+**_Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings._**
 
-DELETE /expenses/:expenseId → Delete an expense
+**_Step 4: Start the development server by running npm start._**
 
-GET /expenses/filter?filter=week|month|3months|custom&startDate=yyyy-mm-dd&endDate=yyyy-mm-dd → Get filtered expenses
+**_Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses._**
 
-To run this Expense Tracker backend locally, follow these steps.
-
-Step 1: Clone the repository to your local machine using Git.
-
-Step 2: Navigate into the project directory and run npm install to install all required dependencies.
-
-Step 3: Create a .env file in the root folder and define your environment variables—most importantly, add JWT_SECRET and your database connection settings.
-
-Step 4: Start the development server by running npm start.
-
-Step 5: Use a tool like Postman to test the API. Authentication routes start with /users, and expense-related routes (like add, edit, delete, and filter) start with /expenses.
-
-Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated.
+**_Step 6: For any protected routes, make sure to include your JWT token in an HTTP-only cookie to stay authenticated._**
